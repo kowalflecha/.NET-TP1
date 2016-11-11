@@ -1,0 +1,153 @@
+//TP 1 ­ Taller VI ­ Profesor: Almiñana Gabriel
+//Alumno: Soster Francisco Javier
+//1­ Realizar un programa de consola que permita ingresar el nombre y apellido por
+separado, con estos datos debe imprimir un mensaje con el nombre completo.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApplication1
+{
+class Program
+{
+static void Main(string[] args)
+{
+Console.WriteLine("Ingrese su Nombre: ");
+string nombre = Console.ReadLine();
+Console.WriteLine("Ingrese su Apellido: ");
+string apellido = Console.ReadLine();
+Console.WriteLine("Su nombre completo es " + nombre + " " + apellido);
+Console.ReadKey();
+        }
+    }
+}
+//2­ Realizar un programa de consola que permita ingresar el nombre y la edad, con
+estos datos debe imprimir un mensaje diciendo si es mayor de edad o no.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApplication1
+{
+class Program
+{
+static void Main(string[] args)
+{
+Console.WriteLine("Ingrese su Nombre: ");
+string nombre = Console.ReadLine();
+Console.WriteLine("Ingrese su Edad: ");
+              int edad = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Su nombre es: "+ nombre);
+if (edad >= 18)
+{
+Console.WriteLine("Y es mayor de edad.");
+}
+else
+{
+Console.WriteLine("Y es menor de edad.");
+}
+Console.ReadKey();
+        }
+    }
+}
+//3­ Realizar un programa de consola que permita ingresar un número y calcule la
+suma de todos los números enteros anteriores
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApplication1
+{
+class Program
+{
+static void Main(string[] args)
+{
+int suma = 0;
+Console.WriteLine("Ingrese un número: ");
+int numero = Convert.ToInt32(Console.ReadLine());
+for (int i = 0; i <= numero; i++)
+{
+suma = i + suma;
+}
+Console.WriteLine("La suma de los números anteriores es: " + suma);
+Console.ReadKey();
+        }
+    }
+}
+//4­ Realizar un programa de consola que permita ingresar 2 valores y encuentre el
+maximo comun divisor
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApplication1
+{
+class Program
+{
+static void Main(string[] args)
+{
+int modulo = 0;
+Console.WriteLine("Ingrese un número 1: ");
+int numero1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ingrese un número 2: ");
+int numero2 = Convert.ToInt32(Console.ReadLine());
+while (numero1 > 1)
+{
+modulo = numero1 % numero2;
+if (modulo == 0)
+{
+break;
+}
+else
+{
+numero1 = numero2;
+numero2 = modulo;
+}
+}
+Console.WriteLine("El M.C.D. es: " + numero2);
+Console.ReadKey();
+}
+}
+}
+//5­ Realizar un programa de consola que permita ingresar números y que termine de
+pedir números cuando se ingresa 0 y calcule el promedio de todos los ingresados
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApplication1
+{
+class Program
+{
+static void Main(string[] args)
+{
+int numero = 1;
+int suma = 0;
+int promedio = 0;
+int contador = 0;
+while (numero != 0)
+{
+Console.WriteLine("Ingrese un número: ");
+numero = Convert.ToInt32(Console.ReadLine());
+if (numero == 0)
+{
+break;
+}
+else
+{
+suma = numero + suma;
+contador++;
+promedio = suma / contador;
+}
+}
+Console.WriteLine("El promedio de los números anteriores es: " +
+promedio);
+Console.ReadKey();
+}
+}
+}
